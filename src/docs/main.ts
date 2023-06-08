@@ -11,11 +11,6 @@ import "@/assets/styles/md-style.scss";
 // 主题 light or dark
 import "@/assets/styles/theme.scss";
 
-// 默认中文
-if (localStorage.getItem("language") === null) {
-  localStorage.setItem("language", "en-US");
-}
-
 if (isMobile) {
   location.replace("/demo/demo.html" + location.hash);
 }
