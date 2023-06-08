@@ -4,7 +4,6 @@ import Index from "@/views/Index.vue";
 import Main from "@/views/Main.vue";
 import Guide from "@/views/Guide.vue";
 import Component from "@/views/Component.vue";
-import OtherDocs from "@/views/otherdocs/index.vue";
 
 const pagesRouter: Array<RouteRecordRaw> = [];
 const pagesEnRouter: Array<RouteRecordRaw> = [];
@@ -69,23 +68,6 @@ const routes: Array<RouteRecordRaw> = [
     component: Index,
     children: [
       {
-        path: "/zh-CN/pages/otherDocs",
-        name: "pages",
-        component: Guide,
-        children: [
-          {
-            path: `/zh-CN/pages/otherDocs`,
-            component: OtherDocs,
-            name: `zh-CN/pages/otherDocs`,
-          },
-          {
-            path: `/en-US/pages/otherDocs`,
-            component: OtherDocs,
-            name: `en-US/pages/otherDocs`,
-          },
-        ],
-      },
-      {
         path: "/zh-CN/guide",
         name: "guide",
         component: Guide,
@@ -113,14 +95,16 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
+console.log(routes, 99);
+
 // 404 路由
-routes.push({
-  name: "notFound",
-  path: "/:path(.*)+",
-  redirect: {
-    name: "/",
-  },
-});
+// routes.push({
+//   name: "notFound",
+//   path: "/:path(.*)+",
+//   redirect: {
+//     name: "/",
+//   },
+// });
 
 const router = createRouter({
   history: createWebHashHistory(),
