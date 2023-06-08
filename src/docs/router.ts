@@ -11,12 +11,10 @@ const pagesEnRouter: Array<RouteRecordRaw> = [];
 const guideRouters: Array<RouteRecordRaw> = [];
 const guideEnRouters: Array<RouteRecordRaw> = [];
 
-/** 组件源码 src/docs_vue/docs 文档 -> 组件部分路由 */
-const modulesPage = (import.meta as any).glob(
-  "/src/docs_vue/docs/**/doc.zh-CN.md"
-);
+/** 组件源码 src/docs/docs 文档 -> 组件部分路由 */
+const modulesPage = (import.meta as any).glob("/src/docs/docs/**/doc.zh-CN.md");
 for (const path in modulesPage) {
-  const name = (/docs_vue\/docs\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
+  const name = (/docs\/docs\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
   pagesRouter.push({
     path: `/zh-CN/component/${name}`,
     component: modulesPage[path],
@@ -25,10 +23,10 @@ for (const path in modulesPage) {
 }
 
 const modulesEnPage = (import.meta as any).glob(
-  "/src/docs_vue/docs/**/doc.en-US.md"
+  "/src/docs/docs/**/doc.en-US.md"
 );
 for (const path in modulesEnPage) {
-  const name = (/docs_vue\/docs\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
+  const name = (/docs\/docs\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
   pagesEnRouter.push({
     path: `/en-US/component/${name}`,
     component: modulesEnPage[path],
@@ -36,10 +34,10 @@ for (const path in modulesEnPage) {
   });
 }
 
-/** 指南部分: 本工程 src/docs 文档 */
+/** 指南部分: 本工程 src/guide 文档 */
 const modulesDocs = (import.meta as any).glob("/src/docs/*.zh-CN.md");
 for (const path in modulesDocs) {
-  const name = (/docs\/(.*).zh-CN.md/.exec(path) as any[])[1];
+  const name = (/guide\/(.*).zh-CN.md/.exec(path) as any[])[1];
 
   guideRouters.push({
     path: `/zh-CN/guide/${name}`,
@@ -47,9 +45,9 @@ for (const path in modulesDocs) {
     name: `zh-CN/guide/${name}`,
   });
 }
-const modulesEnDocs = (import.meta as any).glob("/src/docs/*.en-US.md");
+const modulesEnDocs = (import.meta as any).glob("/src/guide/*.en-US.md");
 for (const path in modulesEnDocs) {
-  const name = (/docs\/(.*).en-US.md/.exec(path) as any[])[1];
+  const name = (/guide\/(.*).en-US.md/.exec(path) as any[])[1];
 
   guideEnRouters.push({
     path: `/en-US/guide/${name}`,
