@@ -27,7 +27,7 @@ import {
 } from "vue-router";
 import Nav from "@/components/Nav.vue";
 import DemoPreview from "@/components/DemoPreview.vue";
-import "quark-doc-header/lib/index";
+import "quark-doc-header";
 
 export default defineComponent({
   name: "doc",

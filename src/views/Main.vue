@@ -240,7 +240,7 @@ import {
 import { useI18n } from "vue-i18n";
 import CodeDemo from "./components/codedemo/index.vue";
 
-import "quark-doc-header/lib/index";
+import "quark-doc-header";
 
 export default defineComponent({
   name: "Main",
