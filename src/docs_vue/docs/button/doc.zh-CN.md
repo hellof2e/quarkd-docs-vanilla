@@ -6,8 +6,10 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/button";
+```html
+<script type="module">
+  import 'quarkd/lib/button'
+</script>
 ```
 
 ### 基本使用
@@ -66,6 +68,30 @@ import "quarkd/lib/button";
 <quark-button disabled plain>禁用状态</quark-button>
 ```
 
+
+JavaScript操作get、set
+```js
+btn.disabled;//获取
+btn.disabled = false;
+btn.disabled = true;
+
+//原生属性操作
+btn.getAttribute('disabled');
+btn.setAttribute('disabled', '');
+btn.removeAttribute('disabled');
+btn.toggleAttribute('disabled', [force]);
+```
+
+所有组件关于属性的获取和设置均类似写法：
+```js
+comp.props;//获取
+comp.props = newProps;
+
+//原生属性操作
+comp.setAttribute('props',newProps);
+comp.removeAttribute('props');
+```
+
 ### 按钮形状
 
 通过 `shape` 属性设置按钮形状，支持圆角（`round`）、方形按钮(`square`)和默认的小圆角。
@@ -82,36 +108,19 @@ import "quarkd/lib/button";
 ```html
 <quark-button loading type="danger" loadtype="circular">加载中...</quark-button>
 <quark-button loading type="warning">加载中...</quark-button>
-<!-- @click="changeLoading" -->
-<quark-button type="success" onclick="changeLoading()">Click me!</quark-button>
+<quark-button type="success">Click me!</quark-button>
 ```
-
+JavaScript操作get、set
 ```js
-function changeLoading() {
-  btn.loading = true;
-  setTimeout(() => {
-    btn.loadng = false;
-  }, 2000); // 点击2s后loading消失
-}
+btn.loading;
+btn.loading = false;
+btn.loading = true;
 
-export default {
-  setup() {
-    const isLoading = ref(false);
-
-    const changeLoading = () => {
-      isLoading.value = true;
-      setTimeout(() => {
-        isLoading.value = false;
-      }, 2000); // 点击2s后loading消失
-    };
-
-    return {
-      data,
-      isLoading,
-      changeLoading,
-    };
-  },
-};
+//原生属性操作
+btn.getAttribute('loading');
+btn.setAttribute('loading', '');
+btn.removeAttribute('loading');
+btn.toggleAttribute('loading', [force]);
 ```
 
 ### 图标按钮
@@ -120,6 +129,13 @@ export default {
 
 ```html
 <quark-button type="primary" icon="https://xx.png"> 喜欢 </quark-button>
+```
+
+```js
+btn.icon = 'name';
+
+//原生属性操作
+btn.setAttribute('icon', 'icon-name');
 ```
 
 ## API
