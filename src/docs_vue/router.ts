@@ -11,9 +11,11 @@ const guideRouters: Array<RouteRecordRaw> = [];
 const guideEnRouters: Array<RouteRecordRaw> = [];
 
 /** 组件源码 src/docs/docs 文档 -> 组件部分路由 */
-const modulesPage = (import.meta as any).glob("/src/docs/docs/**/doc.zh-CN.md");
+const modulesPage = (import.meta as any).glob(
+  "/src/docs_vue/docs/**/doc.zh-CN.md"
+);
 for (const path in modulesPage) {
-  const name = (/docs\/docs\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
+  const name = (/docs_vue\/docs\/(.*)\/doc.zh-CN.md/.exec(path) as any[])[1];
   pagesRouter.push({
     path: `/zh-CN/component/${name}`,
     component: modulesPage[path],
@@ -22,10 +24,10 @@ for (const path in modulesPage) {
 }
 
 const modulesEnPage = (import.meta as any).glob(
-  "/src/docs/docs/**/doc.en-US.md"
+  "/src/docs_vue/docs/**/doc.en-US.md"
 );
 for (const path in modulesEnPage) {
-  const name = (/docs\/docs\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
+  const name = (/docs_vue\/docs\/(.*)\/doc.en-US.md/.exec(path) as any[])[1];
   pagesEnRouter.push({
     path: `/en-US/component/${name}`,
     component: modulesEnPage[path],
@@ -35,8 +37,10 @@ for (const path in modulesEnPage) {
 
 /** 指南部分: 本工程 src/guide 文档 */
 const modulesDocs = (import.meta as any).glob("/src/docs/*.zh-CN.md");
+console.log(modulesDocs, 9);
+
 for (const path in modulesDocs) {
-  const name = (/guide\/(.*).zh-CN.md/.exec(path) as any[])[1];
+  const name = (/docs\/(.*).zh-CN.md/.exec(path) as any[])[1];
 
   guideRouters.push({
     path: `/zh-CN/guide/${name}`,
@@ -44,9 +48,10 @@ for (const path in modulesDocs) {
     name: `zh-CN/guide/${name}`,
   });
 }
+
 const modulesEnDocs = (import.meta as any).glob("/src/guide/*.en-US.md");
 for (const path in modulesEnDocs) {
-  const name = (/guide\/(.*).en-US.md/.exec(path) as any[])[1];
+  const name = (/docs\/(.*).en-US.md/.exec(path) as any[])[1];
 
   guideEnRouters.push({
     path: `/en-US/guide/${name}`,
@@ -54,6 +59,8 @@ for (const path in modulesEnDocs) {
     name: `en-US/guide/${name}`,
   });
 }
+
+console.log(guideRouters, 9);
 
 // 自定义路由
 const routes: Array<RouteRecordRaw> = [

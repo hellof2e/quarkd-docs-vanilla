@@ -66,7 +66,8 @@
   }
 
   p {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
   }
 
@@ -95,7 +96,7 @@
     td {
       padding: 8px 20px;
       color: #fff;
-      
+
       &:first-child {
         border-left: 0px;
         code {
@@ -181,11 +182,13 @@
     margin: 16px 0px;
     padding: 16px;
     background-color: rgba(100, 108, 255, .08);
-    border: 1px solid var(--brand-color);
+    border-left: 4px solid var(--brand-color);
     border-radius: 8px;
-    p {
-      color: #fff;
-    }
+    color: var(--text-font-color);
+
+    // p {
+    //   color: #fff;
+    // }
   }
 
   &--changelog,

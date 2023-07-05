@@ -1,10 +1,20 @@
+
 # Quark Design
 
-Quark Design (Quarkd) 是一套基于 `Web Components` 的跨框架 UI 组件库，输出标准的 `Custom Element`。
+Quarkd （Quark Design缩写）是一套基于 `Web Components` 的跨框架 UI 组件库，输出标准的 `Custom Element`。
 
 所有组件可以同时在 `React、Vue、Preact、Angular` 或原生 JS 等任意框架或无框架中使用。
 
-<div style="margin:30px 0;"><img src="https://m.hellobike.com/resource/helloyun/13459/AOAJV_quark-logo2.png?x-oss-process=image/quality,q_80" width="150" /></div>
+<br/>
+
+不同于“主流其它的组件库”，Quarkd 没有在“前人”组件建设能力上做复制/粘贴，我们有自己的思考，移除了一些不必要或者我们认为不合理的设计点，同时减轻了代码量/代码逻辑。让这个组件库变得更轻盈，贴近原生（设计上也是）。
+
+<div style="margin:30px 0;"><img src="https://m.hellobike.com/resource/helloyun/13459/Z_3qI_quarkd-dark.png?x-oss-process=image/quality,q_80" width="300" /></div>
+
+
+> 使用 quarkd 前，推荐先学习官方的 [Web Components 概念和使用](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components)。
+组件库默认开启 [Shadow DOM](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)，使用 W3C 原生的插槽 [slot](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/slot) 和自定义事件 [Custom Events](https://developer.mozilla.org/zh-CN/docs/Web/API/CustomEvent) 能力。
+
 
 ## 特性
 
