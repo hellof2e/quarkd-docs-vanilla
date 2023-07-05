@@ -14,7 +14,7 @@
 
 
 ```
-<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js" />
+<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
 ## 通过 NPM 安装

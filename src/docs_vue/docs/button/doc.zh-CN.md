@@ -12,6 +12,11 @@
 </script>
 ```
 
+或 CDN
+```html
+<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
+```
+
 ### 基本使用
 
 ```html

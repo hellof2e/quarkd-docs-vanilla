@@ -12,7 +12,7 @@ The easiest way to use quark is to directly introduce the CDN link in the HTML f
 
 ```
 <!-- Introduce CDN files, only 80kb -->
-<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js" />
+<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
 
 ## NPM Install
