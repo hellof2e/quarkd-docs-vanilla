@@ -38,16 +38,7 @@ import "quarkd/lib"
 
 ## 使用示例
 
-```tsx
-<template>
-  <div>
-    <quark-button type="primary" @click="handleClick">按钮</quark-button>;
-  </div>
-</template>
-<script>
-  import "quarkd/lib/button";
-</script>
-```
+> git 仓库示例：https://github.com/hellof2e/quarkd-vanillaJS-example
 
 ## Polyfill
 

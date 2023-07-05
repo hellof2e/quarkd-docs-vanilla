@@ -5,7 +5,7 @@
 按钮。
 
 
-> git 仓库示例：https://github.com/hellof2e/quarkd-vanillaJS-example/button.html
+> git 仓库示例：https://github.com/hellof2e/quarkd-vanillaJS-example/blob/master/button.html
 
 
 ### 安装使用
