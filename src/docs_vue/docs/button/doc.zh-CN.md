@@ -4,6 +4,10 @@
 
 按钮。
 
+
+> git 仓库示例：https://github.com/hellof2e/quarkd-vanillaJS-example/button.html
+
+
 ### 安装使用
 
 ```html
@@ -16,6 +20,7 @@
 ```html
 <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
 ```
+
 
 ### 基本使用
 
