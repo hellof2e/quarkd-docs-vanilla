@@ -82,7 +82,8 @@ btn.removeAttribute('disabled');
 btn.toggleAttribute('disabled', [force]);
 ```
 
-所有组件关于属性的获取和设置均类似写法：
+> 所有组件关于属性的获取和设置均类似写法：
+
 ```js
 comp.props;//获取
 comp.props = newProps;

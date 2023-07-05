@@ -6,8 +6,10 @@ To trigger an operation.
 
 ### Install
 
-```tsx
-import "quarkd/lib/button";
+```html
+<script type="module">
+  import 'quarkd/lib/button'
+</script>
 ```
 
 ### Basic Usage
@@ -67,6 +69,31 @@ To mark a button as disabled, add `disabled` prop to the Button. The button cann
 <quark-button disabled plain type="primary">Disabled</quark-button>
 ```
 
+
+JavaScript 操作 get、set
+```js
+btn.disabled;//获取
+btn.disabled = false;
+btn.disabled = true;
+
+// 原生属性操作
+btn.getAttribute('disabled');
+btn.setAttribute('disabled', '');
+btn.removeAttribute('disabled');
+btn.toggleAttribute('disabled', [force]);
+```
+
+> 所有组件关于属性的获取和设置均类似写法：
+
+```js
+comp.props;//获取
+comp.props = newProps;
+
+//原生属性操作
+comp.setAttribute('props',newProps);
+comp.removeAttribute('props');
+```
+
 ### Shape
 
 A button shape can be added to a button by setting `shape` prop on the Button, which supports `round` and `square` buttons. The default is small rounded corners.
@@ -89,26 +116,17 @@ A loading indicator can be added to a button by setting `loading` prop on the Bu
   >Click me!</quark-button
 >
 ```
-
+JavaScript操作get、set
 ```js
-export default {
-  setup() {
-    const isLoading = ref(false);
+btn.loading;
+btn.loading = false;
+btn.loading = true;
 
-    const changeLoading = () => {
-      isLoading.value = true;
-      setTimeout(() => {
-        isLoading.value = false;
-      }, 2000);
-    };
-
-    return {
-      data,
-      isLoading,
-      changeLoading,
-    };
-  },
-};
+//原生属性操作
+btn.getAttribute('loading');
+btn.setAttribute('loading', '');
+btn.removeAttribute('loading');
+btn.toggleAttribute('loading', [force]);
 ```
 
 ### Icon
@@ -122,6 +140,15 @@ Button components can contain an Icon. This is done by setting `icon` prop withi
   >Like</quark-button
 >
 ```
+
+
+```js
+btn.icon = 'name';
+
+//原生属性操作
+btn.setAttribute('icon', 'icon-name');
+```
+
 
 ## API
 
