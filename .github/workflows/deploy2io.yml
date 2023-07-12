@@ -25,6 +25,6 @@ jobs:
           branch: main # action 应该部署到的分支。
           folder: dist # 操作应该部署的文件夹。
           clean: false
-          repository-name: hellof2e/vanilla-quarkdesign.github.io
+          repository-name: hellof2e/vanilla-quarkd.github.io
           token: ${{ secrets.GIT_ACTION }}
           target-folder: /
