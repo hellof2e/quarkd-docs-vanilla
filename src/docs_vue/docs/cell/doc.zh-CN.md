@@ -4,10 +4,15 @@
 
 列表项，可组成列表。
 
-### 安装使用
+### 使用方式
 
-```tsx
-import "quarkd/lib/cell";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/cell";
+</script>
+<!-- 使用 -->
+<quark-cell title="这是标题" />
 ```
 
 ### 基本用法

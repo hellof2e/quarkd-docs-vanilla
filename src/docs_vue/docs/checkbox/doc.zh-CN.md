@@ -4,10 +4,15 @@
 
 用于在选中和非选中状态之间进行切换。
 
-### 安装使用
+### 使用方式
 
-```tsx
-import "quarkd/lib/checkbox";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/checkbox";
+</script>
+<!-- 使用 -->
+<quark-checkbox :checked="mycheck" @change="onChange">勾选</quark-checkbox>
 ```
 
 ### 复选框基础用法

@@ -10,6 +10,19 @@
 import "quarkd/lib/countdown";
 ```
 
+
+### 安装使用
+
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/countdown";
+</script>
+<!-- 使用 -->
+<quark-countdown time="360000" format="MM:SS" />
+```
+
+
 ### 基本使用
 
 ```html

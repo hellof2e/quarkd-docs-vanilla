@@ -9,8 +9,13 @@ To toggle between the checked and unchecked status.
 
 ### Install
 
-```tsx
-import "quarkd/lib/checkbox";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/checkbox";
+</script>
+<!-- 使用 -->
+<quark-checkbox :checked="mycheck" @change="onChange">勾选</quark-checkbox>
 ```
 
 ### Basic Usage

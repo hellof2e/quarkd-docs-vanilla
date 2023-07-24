@@ -8,8 +8,15 @@
 
 ```tsx
 npm install --save @quarkd/icons
+```
 
-import '@quarkd/icons/lib/user';
+### 使用
+
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/user";
+</script>
 ```
 
 ### 基本使用

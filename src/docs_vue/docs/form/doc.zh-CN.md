@@ -6,9 +6,13 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/form";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/form";
+</script>
 ```
+
 
 ### 基本用法
 

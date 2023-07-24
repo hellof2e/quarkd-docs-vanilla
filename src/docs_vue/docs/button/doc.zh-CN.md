@@ -8,19 +8,16 @@
 > git 仓库示例：https://github.com/hellof2e/quarkd-vanillaJS-example/blob/master/button.html
 
 
-### 安装使用
+### 使用方式
 
 ```html
+<!-- 引入 -->
 <script type="module">
   import 'quarkd/lib/button'
 </script>
+<!-- 使用 -->
+<quark-button>默认按钮</quark-button>
 ```
-
-或 CDN
-```html
-<script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script>
-```
-
 
 ### 基本使用
 

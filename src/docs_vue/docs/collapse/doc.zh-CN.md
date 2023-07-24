@@ -6,9 +6,17 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/collapse";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/collapse";
+</script>
+<!-- 使用 -->
+<quark-collapse :title="title">
+  生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。
+</quark-collapse>
 ```
+
 
 ### 基本用法
 

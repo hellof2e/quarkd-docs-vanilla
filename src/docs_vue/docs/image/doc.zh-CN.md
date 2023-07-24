@@ -6,9 +6,17 @@
 
 ### 安装使用
 
-```jsx
-import "quarkd/lib/image";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/image";
+</script>
+<!-- 使用 -->
+<quark-image
+  src="https://m.hellobike.com/resource/helloyun/13459/_zZAz_2546.jpg_wh300.jpg"
+/>
 ```
+
 
 ### 基础用法
 

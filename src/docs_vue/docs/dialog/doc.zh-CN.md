@@ -13,9 +13,13 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/dialog";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/dialog";
+</script>
 ```
+
 
 ### 提示弹窗
 

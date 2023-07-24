@@ -6,8 +6,11 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/grid";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/grid";
+</script>
 ```
 
 ### 基本使用

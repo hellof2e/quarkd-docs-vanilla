@@ -10,6 +10,16 @@
 import "quarkd/lib/datetimepicker";
 ```
 
+### 安装使用
+
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/datetimepicker";
+</script>
+```
+
+
 ### 基础用法
 
 #### 选择年月日

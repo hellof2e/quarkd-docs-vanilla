@@ -49,7 +49,7 @@ for (const path in modulesDocs) {
   });
 }
 
-const modulesEnDocs = (import.meta as any).glob("/src/guide/*.en-US.md");
+const modulesEnDocs = (import.meta as any).glob("/src/docs/*.en-US.md");
 for (const path in modulesEnDocs) {
   const name = (/docs\/(.*).en-US.md/.exec(path) as any[])[1];
 

@@ -6,8 +6,13 @@ The cell is a single display item in the list.
 
 ### Install
 
-```tsx
-import "quarkd/lib/cell";
+```html
+<!-- import -->
+<script type="module">
+  import "quarkd/lib/cell";
+</script>
+<!-- use -->
+<quark-cell title="Cell Title" />
 ```
 
 ### Basic Usage

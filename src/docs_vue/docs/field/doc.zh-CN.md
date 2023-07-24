@@ -6,9 +6,13 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/field";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/field";
+</script>
 ```
+
 
 ### 基础用法
 
