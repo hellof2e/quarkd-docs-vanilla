@@ -4,10 +4,14 @@
 
 提供基础图片预览功能
 
+
 ### 安装使用
 
-```tsx
-import imagePreview from "quarkd/lib/imagepreview";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/imagepreview";
+</script>
 ```
 
 ### 基础用法

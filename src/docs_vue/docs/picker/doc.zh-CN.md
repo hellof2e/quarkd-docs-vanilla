@@ -10,6 +10,24 @@
 import "quarkd/lib/picker";
 ```
 
+### 安装使用
+
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/picker";
+</script>
+<!-- 使用 -->
+<quark-picker
+  open
+  title="请选择时间"
+  onclose="close"
+  onconfirm="confirm"
+  onchange="change"
+/>
+```
+
+
 ### 基础用法
 
 ```html

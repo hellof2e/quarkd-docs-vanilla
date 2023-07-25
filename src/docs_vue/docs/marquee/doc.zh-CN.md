@@ -6,9 +6,15 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/marquee";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/marquee";
+</script>
+<!-- 使用 -->
+<quark-marquee title="title"></quark-marquee>
 ```
+
 
 ### 基础用法
 

@@ -6,8 +6,13 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/overlay";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/overlay";
+</script>
+<!-- 使用 -->
+<quark-overlay open />
 ```
 
 ### 基础用法

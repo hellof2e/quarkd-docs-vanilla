@@ -6,8 +6,11 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/list";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/list";
+</script>
 ```
 
 ### 基础用法

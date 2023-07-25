@@ -4,16 +4,23 @@
 
 提供消息通知功能
 
+
 ### 安装使用
 
-```tsx
-import "quarkd/lib/noticebar";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/noticebar";
+</script>
+<!-- 使用 -->
+<quark-noticebar text="text"></quark-noticebar>
 ```
+
 
 ### 基础用法
 
 ```html
-<quark-noticebar :text="text"></quark-noticebar>
+<quark-noticebar text="text"></quark-noticebar>
 ```
 
 ### 文字行数设置
@@ -21,7 +28,7 @@ import "quarkd/lib/noticebar";
 通过内嵌 `multiple` 控制文字行数。
 
 ```html
-<quark-noticebar :text="multipleText" :multiple="2"></quark-noticebar>
+<quark-noticebar text="multipleText" :multiple="2"></quark-noticebar>
 ```
 
 ### 样式设置
@@ -29,7 +36,7 @@ import "quarkd/lib/noticebar";
 通过 `color` 控制字体颜色，通过 `bgcolor` 控制背景色。
 
 ```html
-<quark-noticebar :text="text" color="red" bgcolor="#ddd"></quark-noticebar>
+<quark-noticebar text="text" color="red" bgcolor="#ddd"></quark-noticebar>
 ```
 
 ### 文字超长滚动

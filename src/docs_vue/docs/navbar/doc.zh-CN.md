@@ -6,9 +6,15 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/navbar";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/navbar";
+</script>
+<!-- 使用 -->
+<quark-navbar title="页面标题"></quark-navbar>
 ```
+
 
 ### 基础用法
 

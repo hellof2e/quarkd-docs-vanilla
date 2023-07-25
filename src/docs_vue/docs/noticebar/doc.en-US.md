@@ -13,7 +13,7 @@ import "quarkd/lib/noticebar";
 ### Basic Usage
 
 ```html
-<quark-noticebar :text="text"></quark-noticebar>
+<quark-noticebar text="text"></quark-noticebar>
 ```
 
 ### Multiple lines
@@ -21,7 +21,7 @@ import "quarkd/lib/noticebar";
 Set `multiple` prop on the Noticebar to control the maximum number of lines which text can show.
 
 ```html
-<quark-noticebar :text="multipleText" :multiple="2"></quark-noticebar>
+<quark-noticebar text="multipleText" :multiple="2"></quark-noticebar>
 ```
 
 ### Set style
@@ -29,7 +29,7 @@ Set `multiple` prop on the Noticebar to control the maximum number of lines whic
 The font color is controlled by `color` prop, and the background color is controlled by `bgcolor` prop.
 
 ```html
-<quark-noticebar :text="text" color="red" bgcolor="#ddd"></quark-noticebar>
+<quark-noticebar text="text" color="red" bgcolor="#ddd"></quark-noticebar>
 ```
 
 ### Scrollable

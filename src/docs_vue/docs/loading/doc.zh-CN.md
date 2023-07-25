@@ -4,10 +4,15 @@
 
 加载图标，用于表示加载中的过渡状态。
 
-### 安装
+### 安装使用
 
-```tsx
-import "quarkd/lib/loading";
+```html
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/loading";
+</script>
+<!-- 使用 -->
+<quark-loading></quark-loading>
 ```
 
 ### 基本使用
