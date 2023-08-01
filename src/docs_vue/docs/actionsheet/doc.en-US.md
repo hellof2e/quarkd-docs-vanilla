@@ -6,177 +6,100 @@ The pop-up modal panel at the bottom contains multiple options related to the cu
 
 ### Install
 
-```ts
+```html
+<!-- Import -->
+<script type="module">
 import ActionSheet from "quarkd/lib/action-sheet";
+</script>
 ```
-
 ### Basic Usage
 
-```html
-<div @click="showActionSheet()">Click</div>
-```
 
 ```js
-export default {
-  methods: {
-    showActionSheet() {
-      const actionSheet = ActionSheet({
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  actions: [
+    { name: "Option 1" },
+    { name: "Option 2" },
+    { name: "Option 3" },
+  ],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+})
 ```
 
 ### Show Title
 
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### Show Cancel Button
 
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  cancelText: "取消",
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### Custom Title Style
 
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  titleColor: "red",
+  titleFontSize: 20,
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### Custom Options Style
 
-```html
-<div @click="showActionSheet()">Click</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "Option 1", color: "#999", fontSize: 20 },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  titleColor: "red",
+  titleFontSize: 20,
+  actions: [
+    { name: "选项一", color: "#999", fontSize: 20 },
+    { name: "选项二" },
+    { name: "选项三" },
+  ],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### Custom Cancel Button Style
 
-```html
-<div @click="showActionSheet()">Click</div>
+```js
+ActionSheet({
+  title: "我是标题信息",
+  cancelText: "取消",
+  cancelTextColor: "red",
+  cancelTextFontSize: 20,
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
-```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "This is title message",
-        cancelText: "Cancel",
-        cancelTextColor: "red",
-        cancelTextFontSize: 20,
-        actions: [
-          { name: "Option 1" },
-          { name: "Option 2" },
-          { name: "Option 3" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
-```
 
 ## API
 

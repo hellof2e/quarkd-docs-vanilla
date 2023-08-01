@@ -6,157 +6,101 @@ ActionSheet 动作面板
 
 ### 安装使用
 
-```tsx
+```html
+<!-- 引入 -->
+<script type="module">
 import ActionSheet from "quarkd/lib/action-sheet";
+</script>
 ```
 
 ### 基本用法
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
+通过 JS 进行调用。
 
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const actionSheet = ActionSheet({
-        actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  actions: [
+    { name: "Option 1" },
+    { name: "Option 2" },
+    { name: "Option 3" },
+  ],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+})
 ```
 
 ### 带标题
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "我是标题信息",
-        actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### 带取消按钮
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
 
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "我是标题信息",
-        cancelText: "取消",
-        actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  cancelText: "取消",
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### 自定义标题样式
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "我是标题信息",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  titleColor: "red",
+  titleFontSize: 20,
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### 自定义选项样式
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "我是标题信息",
-        titleColor: "red",
-        titleFontSize: 20,
-        actions: [
-          { name: "选项一", color: "#999", fontSize: 20 },
-          { name: "选项二" },
-          { name: "选项三" },
-        ],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  titleColor: "red",
+  titleFontSize: 20,
+  actions: [
+    { name: "选项一", color: "#999", fontSize: 20 },
+    { name: "选项二" },
+    { name: "选项三" },
+  ],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ### 自定义取消按钮样式
 
-```html
-<div @click="showActionSheet()">点击</div>
-```
-
 ```js
-import ActionSheet from "quarkd/lib/action-sheet";
-export default {
-  methods: {
-    showActionSheet() {
-      const pop = ActionSheet({
-        title: "我是标题信息",
-        cancelText: "取消",
-        cancelTextColor: "red",
-        cancelTextFontSize: 20,
-        actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
-        select: (index, action) => {},
-        cancel: () => {},
-        close: () => {},
-      });
-    },
-  },
-};
+ActionSheet({
+  title: "我是标题信息",
+  cancelText: "取消",
+  cancelTextColor: "red",
+  cancelTextFontSize: 20,
+  actions: [{ name: "选项一" }, { name: "选项二" }, { name: "选项三" }],
+  select: (index, action) => {},
+  cancel: () => {},
+  close: () => {},
+});
 ```
 
 ## API
