@@ -12,7 +12,7 @@ import "@/assets/styles/md-style.scss";
 import "@/assets/styles/theme.scss";
 
 if (isMobile) {
-  location.replace("/demo/demo.html" + location.hash);
+  location.replace("https://quark-design.hellobike.com/demo/demo.html#/");
 }
 
 const app = createApp(App);
