@@ -6,27 +6,19 @@ Users can choose multiple option sets, and there are single-column selection and
 
 ### Install
 
-```tsx
-import "quarkd/lib/picker";
-```
-
-### Basic Usage
-
 ```html
-<template>
-  <div>
-    <h2>Basic Usage</h2>
-    <div @click="click">open</div>
-    <quark-picker
-      ref="pickerRef"
-      :open="open"
-      title="Please choose time"
-      @close="close"
-      @confirm="confirm"
-      @change="change"
-    />
-  </div>
-</template>
+<!-- 引入 -->
+<script type="module">
+  import "quarkd/lib/picker"
+</script>
+<!-- 使用 -->
+<quark-picker
+  open
+  title="请选择时间"
+  onclose="close"
+  onconfirm="confirm"
+  onchange="change"
+/>
 ```
 
 ```js
@@ -76,66 +68,39 @@ export default {
 ### Custom Header
 
 ```html
-<template>
-  <div>
-    <h2>Custom Header</h2>
-    <div @click="click">Custom Header</div>
-    <quark-picker :open="open" @close="close" ref="pickerRef" bottomhidden>
-      <div slot="header" class="head-container">
-        <span class="cancel" @click="close">Cancel</span>
-        <span class="picker-title">Please choose city</span>
-        <span class="ensure" @click="confirm">Confirm</span>
-      </div>
-    </quark-picker>
+<quark-picker :open="open" @close="close" ref="pickerRef" bottomhidden>
+  <div slot="header" class="head-container">
+    <span class="cancel" @click="close">Cancel</span>
+    <span class="picker-title">Please choose city</span>
+    <span class="ensure" @click="confirm">Confirm</span>
   </div>
-</template>
+</quark-picker>
 ```
 
 ```js
-<script>
-export default {
-  data() {
-    return {
-      open: false
-    };
+picker.setColumns([
+  {
+    defaultIndex: 0,
+    values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
   },
-  mounted() {
-    setTimeout(() => {
-      //Simulate async fetch
-      const picker = this.$refs.pickerRef;
-      picker.setColumns(
-        [
-          {
-            defaultIndex: 0,
-            values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-          },
-          {
-            defaultIndex: 1,
-            values: ['Morning', 'Afternoon']
-          }
-        ]
-      )
-    }, 1000)
-  },
-  methods: {
-    click() {
-      this.open = true
-    },
-    close() {
-      this.open = false
-    },
-    confirm() {
-      const picker = this.$refs.pickerRef;
-      const values = picker.getValues()
-      console.log(values)
-      this.open = false
-    },
-    change({detail}) {
-      console.log(detail.value)
-    }
+  {
+    defaultIndex: 1,
+    values: ['上午', '下午']
   }
-};
+])
+
+picker.getValues()
+
+picker.onchange = function({ detail }) {
+  // detail.value
+}
+
+picker.addEventListener('change', function(ev){
+    console.log(this.open);
+    console.log(ev.target.checked);
+})
 ```
+
 
 ## API
 

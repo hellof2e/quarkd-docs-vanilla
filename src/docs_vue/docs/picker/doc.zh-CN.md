@@ -6,16 +6,10 @@
 
 ### 安装使用
 
-```tsx
-import "quarkd/lib/picker";
-```
-
-### 安装使用
-
 ```html
 <!-- 引入 -->
 <script type="module">
-  import "quarkd/lib/picker";
+  import "quarkd/lib/picker"
 </script>
 <!-- 使用 -->
 <quark-picker
@@ -31,128 +25,58 @@ import "quarkd/lib/picker";
 ### 基础用法
 
 ```html
-<template>
-  <div>
-    <h2>基础用法</h2>
-    <div @click="click">open</div>
-    <quark-picker
-      title="请选择时间"
-      ref="pickerRef"
-      :open="open"
-      @close="close"
-      @confirm="confirm"
-      @change="change"
-    />
-  </div>
-</template>
+<div @click="click">open</div>
+<quark-picker
+  title="请选择时间"
+  open
+  onclose="close"
+  onconfirm="confirm"
+  onchange="change"
+/>
 ```
 
 ```js
-<script>
-export default {
-  data() {
-    return {
-      open: false
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      //模拟异步获取数据
-      const picker = this.$refs.pickerRef;
-      picker.setColumns(
-        [
-          {
-            defaultIndex: 0,
-            values: ['星期一', '星期二', '星期三', '星期四', '星期五']
-          },
-          {
-            defaultIndex: 1,
-            values: ['上午', '下午']
-          }
-        ]
-      )
-    }, 1000)
-  },
-  methods: {
-    click() {
-      this.open = true
-    },
-    close() {
-      this.open = false
-    },
-    confirm({detail}) {
-      console.log(detail.value)
-      this.open = false
-    },
-    change({detail}) {
-      console.log(detail.value)
-    }
-  }
-};
+picker.open = true;
+picker.open = flase;
+// 原生属性操作
+picker.setAttribute('open', '')
+picker.removeAttribute('open')
 ```
 
 ### 自定义头部
 
 ```html
-<template>
-  <div>
-    <h2>自定义头部</h2>
-    <div @click="click">自定义头部</div>
-    <quark-picker :open="open" @close="close" ref="pickerRef" bottomhidden>
-      <div slot="header" class="head-container">
-        <span class="cancel" @click="close">取消</span>
-        <span class="picker-title">请选择城市</span>
-        <span class="ensure" @click="confirm">确定</span>
-      </div>
-    </quark-picker>
+<quark-picker open bottomhidden>
+  <div slot="header">
+    <span class="cancel" @click="close">取消</span>
+    <span class="picker-title">请选择城市</span>
+    <span class="ensure" @click="confirm">确定</span>
   </div>
-</template>
+</quark-picker>
 ```
 
 ```js
-<script>
-export default {
-  data() {
-    return {
-      open: false
-    };
+picker.setColumns([
+  {
+    defaultIndex: 0,
+    values: ['星期一', '星期二', '星期三', '星期四', '星期五']
   },
-  mounted() {
-    setTimeout(() => {
-      //模拟异步获取数据
-      const picker = this.$refs.pickerRef;
-      picker.setColumns(
-        [
-          {
-            defaultIndex: 0,
-            values: ['星期一', '星期二', '星期三', '星期四', '星期五']
-          },
-          {
-            defaultIndex: 1,
-            values: ['上午', '下午']
-          }
-        ]
-      )
-    }, 1000)
-  },
-  methods: {
-    click() {
-      this.open = true
-    },
-    close() {
-      this.open = false
-    },
-    confirm() {
-      const picker = this.$refs.pickerRef;
-      const values = picker.getValues()
-      console.log(values,   2222)
-      this.open = false
-    },
-    change({detail}) {
-      console.log(detail.value,   33333)
-    }
+  {
+    defaultIndex: 1,
+    values: ['上午', '下午']
   }
-};
+])
+
+picker.getValues()
+
+picker.onchange = function({ detail }) {
+  // detail.value
+}
+
+picker.addEventListener('change', function(ev){
+  console.log(this.open);
+  console.log(ev.target.checked);
+})
 ```
 
 ## API
