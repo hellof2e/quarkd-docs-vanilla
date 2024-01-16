@@ -39,6 +39,8 @@ Locale.add({
 | Traditional Chinese | zh-TW | `v1.0.0` |
 | Indonesian          | id-ID | `v1.0.0` |
 | Thai                | th-TH | `v1.0.0` |
+| Japanese        | ja-JP  | `v1.0.0` |
+| French         | fr-FR | `v1.0.0` |
 
 <br>
 <br>
