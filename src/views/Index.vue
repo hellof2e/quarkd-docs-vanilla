@@ -130,7 +130,7 @@ export default defineComponent({
 
     const demoUrl =
       import.meta.env.VITE_ENV === "dev"
-        ? "https://quark-design.hellobike.com/demo/demo.html#"
+        ? "https://quark-ecosystem.github.io/quarkd-docs/h5/demo#"
         : defaultUrl;
 
     return {
