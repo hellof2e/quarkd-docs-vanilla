@@ -68,14 +68,10 @@ export default defineComponent({
     };
 
     const watchDemoUrl = (router: RouteLocationNormalized) => {
-      data.demoUrl = `${demoUrl}/${router.path
+      data.demoUrl = `${demoUrl}#/${router.path
         .toLocaleLowerCase()
         .split("/")
         .pop()}?lang=${localStorage.getItem("language")}`;
-    };
-
-    const isReact = (router: RouteLocationNormalized) => {
-      return router.path.indexOf("react") > -1;
     };
 
     onMounted(async () => {
