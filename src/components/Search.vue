@@ -214,16 +214,16 @@ export default defineComponent({
     }
 
     &:hover {
-      color: #646cff;
+      color: #0da6e9;
 
       a {
-        color: #646cff;
+        color: #0da6e9;
       }
     }
   }
 
   .cur {
-    background: #646cff;
+    background: #0da6e9;
     color: #fff;
 
     &:hover {

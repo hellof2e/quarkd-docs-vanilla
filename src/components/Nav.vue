@@ -161,7 +161,7 @@ export default defineComponent({
 
         &:hover {
           a {
-            color: #646cff;
+            color: #0da6e9;
           }
         }
 
@@ -172,7 +172,7 @@ export default defineComponent({
 
           &.router-link-active,
           &.active {
-            color: #646cff;
+            color: #0da6e9;
           }
 
           b {
