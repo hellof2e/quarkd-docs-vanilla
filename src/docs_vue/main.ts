@@ -8,9 +8,6 @@ import "@/assets/styles/reset.scss";
 // demo 文档样式
 import "@/assets/styles/md-style.scss";
 
-// 主题 light or dark
-import "@/assets/styles/theme.scss";
-
 if (isMobile) {
   location.replace("https://quark-ecosystem.github.io/quarkd-docs/h5/demo#/");
 }
